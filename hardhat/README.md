@@ -108,6 +108,15 @@ This design leverages Ritual for private inputs and TEE-backed batch inference r
 
 What should be public, what should stay hidden, and what should be decided by AI versus by a human in a bounty system? Bounty rules, deadlines, reward amounts, commitment hashes, eligibility state, final winner, and payout transactions should be public so participants can audit fairness. Answers should stay hidden during the submission phase so nobody can copy another participant's work. Salts and any private authoring process should remain secret permanently unless the participant chooses to disclose them. AI should help evaluate submissions against the stated rubric, summarize tradeoffs, and rank candidates consistently in a batch. Humans should set the rubric, decide whether the AI result is reasonable, handle edge cases, and accept responsibility for the final award. The best system uses transparent smart-contract rules for custody and deadlines, privacy for submissions until the right time, AI for scalable review, and human judgment for accountability.
 
+## Deployment
+
+Ritual testnet deployment:
+
+- Contract: `0xa6a1618db031cb8332c392c6dc39df4388597797`
+- Transaction: `0x31ab15cfba86bf52d9739ddb4f500b4d4a794c0ccd544dfab97995a4b52edaf1`
+- Chain ID: `1979`
+- Deployer: `0x464a911582988f978f79ECd0d855ED53908e17cD`
+
 ## Useful commands
 
 ```shell

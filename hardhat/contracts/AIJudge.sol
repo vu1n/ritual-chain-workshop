@@ -258,24 +258,24 @@ contract AIJudge is PrecompileConsumer {
             bool judged,
             bool finalized,
             uint256 submissionCount,
+            uint256 revealedCount,
             uint256 winnerIndex,
             bytes memory aiReview
         )
     {
         Bounty storage bounty = bounties[bountyId];
 
-        return (
-            bounty.owner,
-            bounty.title,
-            bounty.rubric,
-            bounty.reward,
-            bounty.deadline,
-            bounty.judged,
-            bounty.finalized,
-            bounty.submissions.length,
-            bounty.winnerIndex,
-            bounty.aiReview
-        );
+        owner = bounty.owner;
+        title = bounty.title;
+        rubric = bounty.rubric;
+        reward = bounty.reward;
+        deadline = bounty.deadline;
+        judged = bounty.judged;
+        finalized = bounty.finalized;
+        submissionCount = bounty.submissions.length;
+        revealedCount = revealedSubmissionCount(bountyId);
+        winnerIndex = bounty.winnerIndex;
+        aiReview = bounty.aiReview;
     }
 
     function getSubmission(
